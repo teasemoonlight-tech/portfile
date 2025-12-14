@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - 田中</title>
+    <!-- Tailwind CSS CDN (レスポンシブデザインに使用) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN (アイコン使用) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* カスタム設定とフォント */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* 非常に薄い青/白 */
+            color: #1f2937; /* 濃いグレー */
+        }
+        .header-bg {
+            background-color: #1e40af; /* 濃い青 */
+        }
+        .accent-color {
+            color: #3b82f6; /* 明るい青 */
+        }
+        .shadow-custom {
+            box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.1), 0 4px 6px -2px rgba(30, 64, 175, 0.05);
+        }
+        /* ガクチカのSTAR要素のスタイル */
+        .star-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3b82f6;
+            background-color: #eff6ff; /* 薄い青 */
+            border-radius: 0.5rem;
+        }
+        .star-label {
+            display: inline-block;
+            font-weight: 700;
+            color: #1e40af;
+            background-color: #bfdbfe; /* 中くらいの青 */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- 1. ヘッダー -->
+    <header class="header-bg text-white p-6 shadow-custom sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold tracking-wider">My Portfolio</h1>
+            <nav class="hidden md:block">
+                <a href="#about" class="mx-3 hover:text-blue-200 transition duration-300">自己紹介</a>
+                <a href="#gaku-chika" class="mx-3 hover:text-blue-200 transition duration-300">ガクチカ</a>
+                <!-- ダミーのナビゲーションアイテム -->
+                <a href="#projects" class="mx-3 hover:text-blue-200 transition duration-300">プロジェクト</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- 2. 自己紹介セクション -->
+        <section id="about" class="my-10 bg-white p-6 md:p-10 rounded-xl shadow-lg border border-gray-100">
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
+                <!-- アイコン/画像代替 -->
+                <div class="w-24 h-24 md:w-32 md:h-32 bg-blue-100 accent-color rounded-full flex items-center justify-center border-4 border-blue-300">
+                    <i class="fas fa-user-circle text-5xl md:text-6xl"></i>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">田中 (Tanaka)</h2>
+                    <p class="text-xl accent-color font-semibold mb-4">日本大学 理工学部 応用情報工学科 1年</p>
+                    <p class="text-gray-600">
+                        プログラミングとゲームが趣味。将来はAIエンジニアを目指し、日々学習中です。技術と情熱で社会に貢献できる人材になるため、積極的に挑戦し続けます。
+                    </p>
+                    <div class="mt-4 flex space-x-4 text-gray-500">
+                        <i class="fas fa-code text-xl" title="プログラミング"></i>
+                        <i class="fas fa-gamepad text-xl" title="ゲーム"></i>
+                        <i class="fas fa-robot text-xl" title="AIエンジニア志望"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 学生時代に力を入れたこと（ガクチカ）セクション -->
+        <section id="gaku-chika" class="my-10">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-gray-700 border-b-2 border-blue-300 pb-2">
+                <i class="fas fa-dumbbell accent-color mr-2"></i>学生時代に力を入れたこと (ガクチカ)
+            </h2>
+            
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                <p class="mb-6 text-gray-600">
+                    高校時代、陸上部の中距離選手としての経験は、私に「主体的な自己管理能力」を教えてくれました。
+                </p>
+
+                <!-- STAR法の分割表示 -->
+                <div class="space-y-4">
+                    <!-- S: Situation -->
+                    <div class="star-item">
+                        <span class="star-label">S: 状況 (Situation)</span>
+                        <p class="mt-1">高校時代、陸上部の中距離選手として活動しました。</p>
+                    </div>
+
+                    <!-- C: Task / Challenge -->
+                    <div class="star-item">
+                        <span class="star-label">C: 課題 (Challenge)</span>
+                        <p class="mt-1">当時の**困難**は、度重なる怪我と体調管理不足による記録の停滞でした。私は、このままではいけないと、受け身の姿勢を改め**「自律的な選手」**になる必要性を感じました。</p>
+                    </div>
+
+                    <!-- A: Action -->
+                    <div class="star-item">
+                        <span class="star-label">A: 行動 (Action)</span>
+                        <p class="mt-1">**私は**、この状況を打破するため、３つの習慣を確立しました。まず専門書を参考に、怪我の部位に合わせたストレッチをルーティン化しました。次に、回復を最優先に考え、毎日23時就寝を徹底して睡眠の質を向上させ、さらに栄養士のアドバイスを元に体づくりに最適な食事メニューに切り替えました。</p>
+                    </div>
+
+                    <!-- R: Result / Reflection -->
+                    <div class="star-item">
+                        <span class="star-label">R: 結果と学び (Result/Reflection)</span>
+                        <p class="mt-1">その結果、最後の大会で自己記録を**3秒**大幅に短縮し、有終の美を飾れました。この経験から、**私は**、目標達成には「問題の特定」と「それを乗り越えるための自己管理能力、すなわち主体的な実行力」が不可欠であることを深く学びました。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ダミーのプロジェクトセクション -->
+        <section id="projects" class="my-10">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-gray-700 border-b-2 border-blue-300 pb-2">
+                <i class="fas fa-laptop-code accent-color mr-2"></i>プロジェクト・スキル
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md transition transform hover:scale-[1.02]">
+                    <h3 class="font-semibold text-lg accent-color mb-2">AI学習プロジェクト</h3>
+                    <p class="text-gray-600">Pythonを用いた画像認識モデルの基礎学習を進行中。TensorFlow/PyTorchを研究しています。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md transition transform hover:scale-[1.02]">
+                    <h3 class="font-semibold text-lg accent-color mb-2">Web制作技術</h3>
+                    <p class="text-gray-600">HTML/CSS/JavaScriptによる基本的なWebサイト構築が可能。UI/UXに配慮した設計を心がけています。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md transition transform hover:scale-[1.02]">
+                    <h3 class="font-semibold text-lg accent-color mb-2">主体性の実践</h3>
+                    <p class="text-gray-600">大学の課題解決サークルでメンバーを巻き込み、データ分析を用いた運営効率化を提案・実施しました。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. フッター -->
+    <footer class="header-bg text-white p-4 mt-10">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2024 Tanaka's Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
